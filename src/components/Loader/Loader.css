@@ -1,0 +1,30 @@
+.custom-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+svg text {
+  stroke: var(--tg-theme-button-color);
+  font-size: 150px;
+  font-weight: 700;
+  stroke-width: 3;
+  animation: textAnimate 3s ease-in-out infinite alternate;
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 100%;
+    stroke-dashoffset: 20%;
+    fill: var(--tg-theme-secondary-background-color);
+    stroke: var(--tg-theme-button-color);
+  }
+
+  100% {
+    stroke-dasharray: 100% 0;
+    stroke-dashoffset: -20%;
+    fill: var(--tg-theme-button-color);
+    stroke: var(--tg-theme-button-color);
+  }
+}
